@@ -1,0 +1,43 @@
+<orders>
+	<order>
+		<oxid>70002223</oxid>
+		<orderdate>2018-12-14T15:48:11</orderdate>
+		<billingaddress>
+			<billemail>wittmann.k@web.de</billemail>
+			<billfname>Krissi Wittmann</billfname>
+			<billstreet>Allerstrasse</billstreet>
+			<billstreetnr>47</billstreetnr>
+			<billcity>Berlin</billcity>
+			<country>
+				<geo>DE</geo>
+			</country>
+			<billzip>12049</billzip>
+		</billingaddress>
+		<payments>
+			<payment>
+				<method-name>INVOICE</method-name>
+				<amount>130.5</amount>
+			</payment>
+		</payments>
+		<articles>
+			<orderarticle>
+				<artnum>00471500075</artnum>
+				<title>Track Suit Women</title>
+				<amount>1</amount>
+				<brutprice>60</brutprice>
+			</orderarticle>
+			<orderarticle>
+				<artnum>00471500079</artnum>
+				<title>Track Suit Women</title>
+				<amount>1</amount>
+				<brutprice>40</brutprice>
+			</orderarticle>
+			<orderarticle>
+				<artnum>0054421091050</artnum>
+				<title>Tracksuit Men</title>
+				<amount>1</amount>
+				<brutprice>30.5</brutprice>
+			</orderarticle>
+		</articles>
+	</order>
+</orders>
