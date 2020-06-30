@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
@@ -17,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Adsology.BusinessLogic\Adsology.BusinessLogic.csproj" />
+    <ProjectReference Include="..\Adsology.Common\Adsology.Common.csproj" />
     <ProjectReference Include="..\Adsology.Dal\Adsology.Dal.csproj" />
   </ItemGroup>
 

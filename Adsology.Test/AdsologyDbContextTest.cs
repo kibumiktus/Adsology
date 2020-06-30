@@ -1,10 +1,11 @@
 using System;
 using System.Threading.Tasks;
+using Adsology.Dal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Xunit;
 
-namespace Adsology.Dal.Test
+namespace Adsology.Test
 {
     public class AdsologyDbContextTest
     {

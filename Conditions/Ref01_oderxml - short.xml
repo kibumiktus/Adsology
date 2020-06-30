@@ -18,6 +18,10 @@
 				<method-name>INVOICE</method-name>
 				<amount>130.5</amount>
 			</payment>
+            <payment>
+                <method-name>INVOICE</method-name>
+                <amount>130.5</amount>
+            </payment>
 		</payments>
 		<articles>
 			<orderarticle>
@@ -40,4 +44,5 @@
 			</orderarticle>
 		</articles>
 	</order>
+
 </orders>
