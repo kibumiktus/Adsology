@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Adsology.Dal.Models;
@@ -108,5 +109,10 @@ namespace Adsology.Dal
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public async Task SaveChangesAsync()
+        {
+            await base.SaveChangesAsync();
+        }
     }
 }

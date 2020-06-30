@@ -1,6 +1,7 @@
 ﻿using Adsology.Common;
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Adsology.BusinessLogic.Model.OrdersXmlImportModel;
 using Adsology.Dal;
@@ -23,8 +24,9 @@ namespace Adsology.BusinessLogic
         public async Task ImportFromXml(Stream stream)
         {
             var deserializeData = XmlStreamSerializer.Deserialize<OrdersCollections>(stream);
-            var dalOrders = _mapper.Map<Orders[]>(deserializeData);
+            var dalOrders = _mapper.Map<Orders[]>(deserializeData.Items);
             await _dbContext.Orders.AddRangeAsync(dalOrders);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

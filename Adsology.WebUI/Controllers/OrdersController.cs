@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using Adsology.BusinessLogic;
 using Adsology.BusinessLogic.Model.OrdersXmlImportModel;
 using Adsology.Common;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Adsology.WebUI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class OrdersController: ControllerBase
+    public class OrdersController : ControllerBase
     {
         private readonly OrdersService _ordersService;
 
@@ -22,10 +23,9 @@ namespace Adsology.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Import(HttpRequestMessage request)
+        public async Task<IActionResult> Import(IFormFile file)
         {
-            var contentStream = await request.Content.ReadAsStreamAsync();
-            await _ordersService.ImportFromXml(contentStream);
+            await _ordersService.ImportFromXml(file.OpenReadStream());
             return Ok();
         }
     }

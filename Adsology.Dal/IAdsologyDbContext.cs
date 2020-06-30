@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Adsology.Dal.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,5 +13,6 @@ namespace Adsology.Dal
         DbSet<OrderStatuses> OrderStatuses { get; set; }
         DbSet<Orders> Orders { get; set; }
         DbSet<Payments> Payments { get; set; }
+        Task SaveChangesAsync();
     }
 }
